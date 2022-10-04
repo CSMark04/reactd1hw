@@ -2,6 +2,7 @@ import ProfileView from './views/Profile';
 import HomeView from './views/Home';
 import './App.css';
 import CarsAvailable from './views/Inventory';
+import PostCar from './views/PostCar';
 
 import {
   BrowserRouter,
@@ -30,6 +31,8 @@ function App() {
       </nav>
       <Routes>
         <Route path="/" element={<HomeView />} />
+        <Route path="/car">
+          <Route path=":id" element={<PostCar />} /> </Route>
         <Route path="/inventory" element={<CarsAvailable />} />
         <Route path="/profile" element={<ProfileView />} />
       </Routes>

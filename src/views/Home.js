@@ -1,9 +1,14 @@
 import Home from "../components/Home";
+import CarList from "../components/CarList";
 
-function HomeView(){
+export default function HomeView(){
     return(
-        <Home />
+        <div>
+                 <Home />
+                 <CarList />
+        </div>
+
+        
     )
 }
 
-export default HomeView
