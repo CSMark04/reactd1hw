@@ -20,8 +20,7 @@ export default function Car(props){
                 (
                     <div className="card-body">
                     <p>{ props.car.year }</p>
-                    <p>Price: ${ props.car.selling_price }</p>
-                    <p>Mileage: { props.car.mileage }</p>
+                    <p>Price: ${ props.car.price }</p>
                     </div>
                 ) 
                 : 

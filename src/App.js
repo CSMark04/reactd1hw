@@ -15,20 +15,21 @@ import {
 function App() {
   return (
     <BrowserRouter>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/inventory">Inventory</Link>
-          </li>
-          <li>
-            <Link to="/profile">profile</Link>
-          </li>
 
-        </ul>
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a className="navbar-brand" href="#">Car Inventory</a>
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div className="navbar-nav">
+            <Link className="nav-link" to="/">Home</Link>
+            <Link className="nav-link" to="/inventory">Inventory</Link>
+            <Link className="nav-link" to="/profile">profile</Link>
+          </div>
+        </div>
       </nav>
+      <div className="container">
       <Routes>
         <Route path="/" element={<HomeView />} />
         <Route path="/car">
@@ -36,6 +37,7 @@ function App() {
         <Route path="/inventory" element={<CarsAvailable />} />
         <Route path="/profile" element={<ProfileView />} />
       </Routes>
+      </div>
     </BrowserRouter>
   )
 }
